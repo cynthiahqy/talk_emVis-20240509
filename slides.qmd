@@ -1,0 +1,94 @@
+---
+title: "Crossmaps"
+subtitle: "emVIS, 9 May 2024"
+author: 
+  - name: "Cynthia A. Huang"
+    affiliation:
+    - "Department of Econometrics and Business Statistics, MBUS"
+bibliography: references.bib
+format: 
+  revealjs: 
+    theme: [default, _extensions/EmilHvitfeldt/letterbox/letterbox.scss, _extensions/numbats/monash/assets/monash.scss]
+    css: [style/custom.css]
+    include-after-body: _extensions/EmilHvitfeldt/letterbox/theme.html
+    width: 1280
+    height: 720
+    slide-number: c/t
+    title-slide-attributes: 
+      data-background-image: "_extensions/numbats/monash/images/bg-02.png"
+      data-background-size: "contain"
+      data-background-position: "center"
+    template-partials:
+      - style/title-slide.html
+    # footer: "[cynthiahuang.quarto.pub/iasc-asr-23](https://cynthiahuang.quarto.pub/iasc-asr-23)"
+---
+
+<!---- todo: use this as template for LMU talk as well --->
+
+# Overview
+
+## Research (Collaboration) Objectives
+
+***Visualising harmonisation logic:***
+
+- About Me!
+- Crossmaps Framework
+    - Motivation
+    - Contribution
+- VIS/CHI Research Opportunities
+    - Data provenance semantics
+    - Interactive data wrangling
+    - Domain applications
+
+::: notes
+-   problem set up (borrow Kai's slide)
+    - semantics of data preparation -- beyond translating (NLP, glyphs, programming languages)
+    - extracting, representing logic of transformations
+    - from imperative to declarative specification
+-   unified framework
+    - dual problems appear when you think about [data imputation model]
+        - implementation & validation of logic: sensitivity analysis, statistical properties
+        - **communication & visualisation of logic**: code-free implementation interfaces, workflows
+-   vis/chi challenges / opportunities
+    - extraction of data imputation model (graph computation) from existing scripts
+        - track-vec; modifying input rather than diff tracing
+    - interactive authoring and modification of data imputation model (i.e. harmonisation logic)
+-   domain applications
+    -   application 01 --> trade/labour concordance for cross-country comparison
+        - xmap workshop paper + sankey layout problem
+    -   application 02 --> geographic concordance
+        - example from merry; what's the best way to display this information?
+    -   application 03 --> causal loop diagrams
+        - harmonisation can happen between any sets of "related" objects (i.e. nodes OR links)
+:::
+
+# Crossmaps Framework
+
+## Problem Statement & Inspiration
+
+## Solution
+
+## Implications
+
+# VIS/CHI research opportunities
+
+## Visualisation / Communication Design
+
+- relates to semantics side of Data Provenance work
+    - hierarchical data provenance
+    - nested model
+- different approach from existing solutions:
+    - smallsets, anteater, COMANTICS etc.
+
+## Interactive Workflow & Validation Tool Design
+
+- relates to verification/tool/interface side of Data Provenance work
+    - reproducibility, validation
+    - logic modification & extraction
+
+## Domain Applications
+
+
+
+    
+
