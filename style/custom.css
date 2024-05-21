@@ -1,4 +1,4 @@
-.button {
+.button-blue {
   background-color: #7aa6da;
   border: none;
   color: white;
@@ -9,7 +9,21 @@
   margin: 0 auto;
   font-size: 1em;
   border-radius: 12px;
-  
+  #height: 50px;
+}
+
+.button-green {
+  background-color: #65956d;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  border-radius: 12px;
+  #height: 50px;
 }
 
 .v-center-container {

@@ -1,6 +1,6 @@
 ---
-title: "Crossmaps"
-subtitle: "emVIS, 9 May 2024"
+title: "Provenance for Multi-Source Datasets"
+subtitle: "EmVIS Lab Meeting, 9 May 2024"
 author: 
   - name: "Cynthia A. Huang"
     affiliation:
@@ -25,20 +25,61 @@ format:
 
 <!---- todo: use this as template for LMU talk as well --->
 
-# Overview
+# Introduction
 
-## Research (Collaboration) Objectives
+## About Me!
 
-***Visualising harmonisation logic:***
+::: incremental
+- 👩‍🎓 PhD Candidate in Econometrics & Business Statistics, Monash Business School
+- 🙏 Supervised by: Rob Hyndman (EBS), Simon Angus (Econ) and Sarah Goodwin!
+- 👋 affiliated at Monash with:
+    - NUMBATS (Non-Uniform Monash Business Analytics Team)
+    - [SoDa Labs](https://www.monash.edu/business/impact-labs/soda-labs) -- alternative data for social science insights
+    - MDFI (Monash Data Futures Institute)
+- 💱 Previously: Economics at Unimelb
+::: 
 
-- About Me!
+## About Me!
+
+::: incremental
+- 📊 Interested in adapting data for research purposes:
+    - **web-scraped** retail product & price data for public health research
+    - mining wikipedia edit **metadata** for evidence of state-sponsored misinformation
+    - train/test sampling strategies for satellite (**image**) deep learning
+- 👩‍🎓 **Provenance and statistical imputation for multi-source datasets**
+    - 🇩🇪 SoDa Statistiks at LMU in June
+    - 🇨🇦 InfoVis group at UBC from Jul-Oct
+- 🧗🏻‍♀️ climber, 🎙️ regular host on The Random Sample podcast
+::: 
+
+## Visualising Multi-Source Harmonisation Logic
+
+::: {.columns}
+
+::: {.column}
+
 - Crossmaps Framework
-    - Motivation
-    - Contribution
-- VIS/CHI Research Opportunities
-    - Data provenance semantics
-    - Interactive data wrangling
-    - Domain applications
+- CS Research (Collaboration) Opportunities
+    - Data provenance communication
+    - Interactive data merging (multi-table)
+- Other downstream projects
+
+:::
+::: {.column}
+::: {.fragment}
+:::{layout="[[-5,88,-5],[-5,90,-5],[-5,45,45,-5]]" layout-align="center"}
+
+[Domain Problem]{.button-blue}
+
+[Provenance Model]{.button-green}
+
+[Visual Encoding]{.button-blue}
+
+[Interactive Tools]{.button-blue}
+:::
+:::
+:::
+:::
 
 ::: notes
 -   problem set up (borrow Kai's slide)
@@ -64,31 +105,143 @@ format:
 
 # Crossmaps Framework
 
-## Problem Statement & Inspiration
+## Ex-Post Harmonisation [1/2]{.f50}
 
-## Solution
+::: {.columns .v-center-container}
 
-## Implications
+::: {.column width="45%"}
 
-# VIS/CHI research opportunities
+> Ex-post (or retrospective) data harmonization refers to **procedures applied to already collected data to improve the comparability** and inferential equivalence of measures from different studies [@kolczynskaCombiningMultipleSurvey2022]
 
-## Visualisation / Communication Design
+:::
 
-- relates to semantics side of Data Provenance work
-    - hierarchical data provenance
-    - nested model
-- different approach from existing solutions:
+::: {.column width="55%"}
+
+![Procedures in ex-post harmonisation](images/diagram_ex-post-process.png){#fig-expost-tasks fig-align="center"}
+
+:::
+
+:::
+
+## Ex-Post Harmonisation [2/2]{.f50}
+
+::: {.columns .v-center-container}
+::: {.fragment .column width="33%"}
+![](images/icon-official-stats.png){fig-align="center" height=200px style="margin: 0; padding: 0; "}
+
+*Defining or selecting mappings between classifications or taxonomies,*
+:::
+
+::: {.fragment .column width="33%"}
+![](images/icon-database.png){fig-align="center" height=200px style="margin: 0; padding: 0; "}
+
+Implementing and validating mappings on given data,
+:::
+
+::: {.fragment .column width="33%"}
+![](images/icon-IEEE-VIS.png){fig-align="center" height=200px style="margin: 0; padding: 0; "}
+
+Documenting and analysing the implemented mapping.
+:::
+:::
+
+## Current Approach: Input/Output Comparison
+
+![](images/diagram_current-prov.png)
+
+## Proposed Alternative: Input & Function Capture
+
+![](images/diagram_crossmaps.png){fig-align="center"}
+
+## Implications (ASC23 Poster)
+
+![](images/poster-section.png){fig-align="center"}
+
+[<https://www.cynthiahqy.com/research/assets/asc-poster.pdf>]{.smaller}
+
+## Contributions
+
+::: {.columns}
+::: {.column}
+- non-hierarchical provenance task abstraction [c.f. @borsProvenanceTaskAbstraction2019]
+- compare with inference/diff-based solutions:
     - smallsets, anteater, COMANTICS etc.
+    - translation -> summary/sense-making
+:::
 
-## Interactive Workflow & Validation Tool Design
+::: {.column}
 
-- relates to verification/tool/interface side of Data Provenance work
-    - reproducibility, validation
-    - logic modification & extraction
+- unified approach to:
+    - transformation auditing (data quality)
+    - transformation documentation (data provenance)
+    - data imputation modelling (statistical robustness)
+:::
+:::
 
-## Domain Applications
+# Future Work
 
+## Visualisation Concepts
 
+::: {.columns}
+::: {.column}
+Transformation Logic:
+![](images/plot-anzsco-isco-bigraph.png){height=550}
+:::
+::: {.column}
+Merged Dataset Quality:
+![](images/isiccomb_rev3_TRUEonly.png)
+:::
+:::
+
+## Provenance Communication & Tools
+
+:::: {.columns}
+::: {.column}
+:::{layout="[[-5,88,-5],[-5,90,-5],[-5,45,45,-5]]" layout-align="center"}
+
+[Domain Problem]{.button-blue}
+
+[Provenance Model]{.button-blue}
+
+[Visual Encoding]{.button-green}
+
+[Interactive Tools]{.button-green}
+:::
+:::
+
+::: {.column}
+
+- *layouts & ordering* (similar to sankey diagram optimisation)
+- encoding distribution weights & relation styles
+- properties of merged dataset
+
+:::
+::::
+
+## Data Wrangling Tools
+
+::: {.columns}
+::: {.column}
+![](images/xmapR.svg){height=550}
+:::
+::: {.column}
+
+- implementing graph, matrix & table representation in R, with symbolic (fractional) weights
+- *extracting mapping logic from existing scripts*
+    - manipulate data input
+    - parse AST into computational graph
+- *authoring and auditing interfaces for non-technical collaborators*
+:::
+:::
+
+## Other Projects
+
+- summary properties of the computational graph as a data imputation model
+- provenenace model for causal loop diagrams
+- multiverse analysis of alternative mapping decisions
+- provenance abstraction for statistical sampling vs. database queries
+
+## References
 
     
 

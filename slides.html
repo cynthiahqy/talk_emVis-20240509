@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Cynthia A. Huang">
-  <title>Crossmaps</title>
+  <title>Provenance for Multi-Source Datasets</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,7 +29,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto.css">
   <link rel="stylesheet" href="style/custom.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -329,8 +349,8 @@
 <section id="title-slide" data-background-image="_extensions/numbats/monash/images/bg-02.png" data-background-position="center" data-background-size="contain" class="quarto-title-block center">
 <div id="title-slide-text">
 
-  <h1 class="title">Crossmaps</h1>
-  <p class="subtitle">emVIS, 9 May 2024</p>
+  <h1 class="title">Provenance for Multi-Source Datasets</h1>
+  <p class="subtitle">EmVIS Lab Meeting, 9 May 2024</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -352,27 +372,101 @@ Cynthia A. Huang
 <!---- todo: use this as template for LMU talk as well --->
 </section>
 <section>
-<section id="overview" class="title-slide slide level1 center">
-<h1>Overview</h1>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
 
 </section>
-<section id="research-collaboration-objectives" class="slide level2">
-<h2>Research (Collaboration) Objectives</h2>
-<p><strong><em>Visualising harmonisation logic:</em></strong></p>
+<section id="about-me" class="slide level2">
+<h2>About Me!</h2>
+<div>
 <ul>
-<li>About Me!</li>
-<li>Crossmaps Framework
+<li class="fragment">👩‍🎓 PhD Candidate in Econometrics &amp; Business Statistics, Monash Business School</li>
+<li class="fragment">🙏 Supervised by: Rob Hyndman (EBS), Simon Angus (Econ) and Sarah Goodwin!</li>
+<li class="fragment">👋 affiliated at Monash with:
 <ul>
-<li>Motivation</li>
-<li>Contribution</li>
+<li class="fragment">NUMBATS (Non-Uniform Monash Business Analytics Team)</li>
+<li class="fragment"><a href="https://www.monash.edu/business/impact-labs/soda-labs">SoDa Labs</a> – alternative data for social science insights</li>
+<li class="fragment">MDFI (Monash Data Futures Institute)</li>
 </ul></li>
-<li>VIS/CHI Research Opportunities
-<ul>
-<li>Data provenance semantics</li>
-<li>Interactive data wrangling</li>
-<li>Domain applications</li>
-</ul></li>
+<li class="fragment">💱 Previously: Economics at Unimelb</li>
 </ul>
+</div>
+</section>
+<section id="about-me-1" class="slide level2">
+<h2>About Me!</h2>
+<div>
+<ul>
+<li class="fragment">📊 Interested in adapting data for research purposes:
+<ul>
+<li class="fragment"><strong>web-scraped</strong> retail product &amp; price data for public health research</li>
+<li class="fragment">mining wikipedia edit <strong>metadata</strong> for evidence of state-sponsored misinformation</li>
+<li class="fragment">train/test sampling strategies for satellite (<strong>image</strong>) deep learning</li>
+</ul></li>
+<li class="fragment">👩‍🎓 <strong>Provenance and statistical imputation for multi-source datasets</strong>
+<ul>
+<li class="fragment">🇩🇪 SoDa Statistiks at LMU in June</li>
+<li class="fragment">🇨🇦 InfoVis group at UBC from Jul-Oct</li>
+</ul></li>
+<li class="fragment">🧗🏻‍♀️ climber, 🎙️ regular host on The Random Sample podcast</li>
+</ul>
+</div>
+</section>
+<section id="visualising-multi-source-harmonisation-logic" class="slide level2">
+<h2>Visualising Multi-Source Harmonisation Logic</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Crossmaps Framework</li>
+<li>CS Research (Collaboration) Opportunities
+<ul>
+<li>Data provenance communication</li>
+<li>Interactive data merging (multi-table)</li>
+</ul></li>
+<li>Other downstream projects</li>
+</ul>
+</div><div class="column">
+<div class="fragment">
+<div class="quarto-layout-panel" data-layout="[[-5,88,-5],[-5,90,-5],[-5,45,45,-5]]" data-layout-align="center">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 89.8%;justify-content: center;">
+<p><span class="button-blue">Domain Problem</span></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 90.0%;justify-content: center;">
+<p><span class="button-green">Provenance Model</span></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: center;">
+<p><span class="button-blue">Visual Encoding</span></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: center;">
+<p><span class="button-blue">Interactive Tools</span></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <aside class="notes">
 <ul>
 <li>problem set up (borrow Kai’s slide)
@@ -430,49 +524,197 @@ Cynthia A. Huang
 <h1>Crossmaps Framework</h1>
 
 </section>
-<section id="problem-statement-inspiration" class="slide level2">
-<h2>Problem Statement &amp; Inspiration</h2>
+<section id="ex-post-harmonisation-12" class="slide level2">
+<h2>Ex-Post Harmonisation <span class="f50">1/2</span></h2>
+<div class="columns v-center-container">
+<div class="column" style="width:45%;">
+<blockquote>
+<p>Ex-post (or retrospective) data harmonization refers to <strong>procedures applied to already collected data to improve the comparability</strong> and inferential equivalence of measures from different studies <span class="citation" data-cites="kolczynskaCombiningMultipleSurvey2022">(<a href="#/references" role="doc-biblioref" onclick="">Kołczyńska 2022</a>)</span></p>
+</blockquote>
+</div><div class="column" style="width:55%;">
+<div id="fig-expost-tasks" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-expost-tasks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/diagram_ex-post-process.png" class="quarto-figure quarto-figure-center">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-expost-tasks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Procedures in ex-post harmonisation
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="solution" class="slide level2">
-<h2>Solution</h2>
+<section id="ex-post-harmonisation-22" class="slide level2">
+<h2>Ex-Post Harmonisation <span class="f50">2/2</span></h2>
+<div class="columns v-center-container">
+<div class="fragment column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/icon-official-stats.png" class="quarto-figure quarto-figure-center" style="margin: 0; padding: 0; " height="200"></p>
+</figure>
+</div>
+<p><em>Defining or selecting mappings between classifications or taxonomies,</em></p>
+</div><div class="fragment column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/icon-database.png" class="quarto-figure quarto-figure-center" style="margin: 0; padding: 0; " height="200"></p>
+</figure>
+</div>
+<p>Implementing and validating mappings on given data,</p>
+</div><div class="fragment column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/icon-IEEE-VIS.png" class="quarto-figure quarto-figure-center" style="margin: 0; padding: 0; " height="200"></p>
+</figure>
+</div>
+<p>Documenting and analysing the implemented mapping.</p>
+</div>
+</div>
 </section>
-<section id="implications" class="slide level2">
-<h2>Implications</h2>
-</section></section>
-<section>
-<section id="vischi-research-opportunities" class="title-slide slide level1 center">
-<h1>VIS/CHI research opportunities</h1>
+<section id="current-approach-inputoutput-comparison" class="slide level2">
+<h2>Current Approach: Input/Output Comparison</h2>
 
+<img data-src="images/diagram_current-prov.png" class="r-stretch"></section>
+<section id="proposed-alternative-input-function-capture" class="slide level2">
+<h2>Proposed Alternative: Input &amp; Function Capture</h2>
+
+<img data-src="images/diagram_crossmaps.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="implications-asc23-poster" class="slide level2">
+<h2>Implications (ASC23 Poster)</h2>
+
+<img data-src="images/poster-section.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="smaller"><a href="https://www.cynthiahqy.com/research/assets/asc-poster.pdf" class="uri">https://www.cynthiahqy.com/research/assets/asc-poster.pdf</a></span></p>
 </section>
-<section id="visualisation-communication-design" class="slide level2">
-<h2>Visualisation / Communication Design</h2>
+<section id="contributions" class="slide level2">
+<h2>Contributions</h2>
+<div class="columns">
+<div class="column">
 <ul>
-<li>relates to semantics side of Data Provenance work
-<ul>
-<li>hierarchical data provenance</li>
-<li>nested model</li>
-</ul></li>
-<li>different approach from existing solutions:
+<li>non-hierarchical provenance task abstraction <span class="citation" data-cites="borsProvenanceTaskAbstraction2019">(c.f. <a href="#/references" role="doc-biblioref" onclick="">Bors et al. 2019</a>)</span></li>
+<li>compare with inference/diff-based solutions:
 <ul>
 <li>smallsets, anteater, COMANTICS etc.</li>
+<li>translation -&gt; summary/sense-making</li>
 </ul></li>
 </ul>
-</section>
-<section id="interactive-workflow-validation-tool-design" class="slide level2">
-<h2>Interactive Workflow &amp; Validation Tool Design</h2>
+</div><div class="column">
 <ul>
-<li>relates to verification/tool/interface side of Data Provenance work
+<li>unified approach to:
 <ul>
-<li>reproducibility, validation</li>
-<li>logic modification &amp; extraction</li>
+<li>transformation auditing (data quality)</li>
+<li>transformation documentation (data provenance)</li>
+<li>data imputation modelling (statistical robustness)</li>
 </ul></li>
 </ul>
+</div>
+</div>
+</section></section>
+<section>
+<section id="future-work" class="title-slide slide level1 center">
+<h1>Future Work</h1>
+
 </section>
-<section id="domain-applications" class="slide level2">
-<h2>Domain Applications</h2>
+<section id="visualisation-concepts" class="slide level2">
+<h2>Visualisation Concepts</h2>
+<div class="columns">
+<div class="column">
+<p>Transformation Logic: <img data-src="images/plot-anzsco-isco-bigraph.png" height="550"></p>
+</div><div class="column">
+<p>Merged Dataset Quality: <img data-src="images/isiccomb_rev3_TRUEonly.png"></p>
+</div>
+</div>
+</section>
+<section id="provenance-communication-tools" class="slide level2">
+<h2>Provenance Communication &amp; Tools</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-layout-panel" data-layout="[[-5,88,-5],[-5,90,-5],[-5,45,45,-5]]" data-layout-align="center">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 89.8%;justify-content: center;">
+<p><span class="button-blue">Domain Problem</span></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 90.0%;justify-content: center;">
+<p><span class="button-blue">Provenance Model</span></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: center;">
+<p><span class="button-green">Visual Encoding</span></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.0%;justify-content: center;">
+<p><span class="button-green">Interactive Tools</span></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 5.0%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div><div class="column">
+<ul>
+<li><em>layouts &amp; ordering</em> (similar to sankey diagram optimisation)</li>
+<li>encoding distribution weights &amp; relation styles</li>
+<li>properties of merged dataset</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="data-wrangling-tools" class="slide level2">
+<h2>Data Wrangling Tools</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="images/xmapR.svg" height="550"></p>
+</div><div class="column">
+<ul>
+<li>implementing graph, matrix &amp; table representation in R, with symbolic (fractional) weights</li>
+<li><em>extracting mapping logic from existing scripts</em>
+<ul>
+<li>manipulate data input</li>
+<li>parse AST into computational graph</li>
+</ul></li>
+<li><em>authoring and auditing interfaces for non-technical collaborators</em></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="other-projects" class="slide level2">
+<h2>Other Projects</h2>
+<ul>
+<li>summary properties of the computational graph as a data imputation model</li>
+<li>provenenace model for causal loop diagrams</li>
+<li>multiverse analysis of alternative mapping decisions</li>
+<li>provenance abstraction for statistical sampling vs.&nbsp;database queries</li>
+</ul>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-borsProvenanceTaskAbstraction2019" class="csl-entry" role="listitem">
+Bors, Christian, John Wenskovitch, Michelle Dowling, Simon Attfield, Leilani Battle, Alex Endert, Olga Kulyk, and Robert S. Laramee. 2019. <span>“A <span>Provenance Task Abstraction Framework</span>.”</span> <em>IEEE Computer Graphics and Applications</em> 39 (6): 46–60. <a href="https://doi.org/10.1109/MCG.2019.2945720">https://doi.org/10.1109/MCG.2019.2945720</a>.
+</div>
+<div id="ref-kolczynskaCombiningMultipleSurvey2022" class="csl-entry" role="listitem">
+Kołczyńska, Marta. 2022. <span>“Combining Multiple Survey Sources: <span>A</span> Reproducible Workflow and Toolbox for Survey Data Harmonization.”</span> <em>Methodological Innovations</em> 15 (1): 62–72. <a href="https://doi.org/10.1177/20597991221077923">https://doi.org/10.1177/20597991221077923</a>.
 </div>
 </div>
 </section></section>
