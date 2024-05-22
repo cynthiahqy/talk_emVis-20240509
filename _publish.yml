@@ -1,0 +1,4 @@
+- source: slides.qmd
+  quarto-pub:
+    - id: 5a803e4e-83c3-4ebe-ab11-28d82868898a
+      url: 'https://cynthiahuang.quarto.pub/emvis-may-2024'
